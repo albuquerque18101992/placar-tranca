@@ -14,7 +14,7 @@ $salvando_jogadores = "INSERT INTO tb_jogadores (jogador_um, jogador_dois, jogad
 $salvando_jogador = mysqli_query($conn, $salvando_jogadores);
 
 if(mysqli_affected_rows($conn) > 0) {
-    echo "<div class='alert alert-success' role='alert'>Nomes de duplas salvas!</div>";
+    header("Location:index.php");
 } else{
     echo "<div class='alert alert-danger' role='alert'>ERRO!</div>";
 }
